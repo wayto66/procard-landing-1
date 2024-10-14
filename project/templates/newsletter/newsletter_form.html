@@ -1,0 +1,26 @@
+{% extends "internas.html" %}
+{% load static widget_tweaks %}
+
+{% load static %}
+{% load thumbnail %}
+{% block name %}Newsletter{% endblock %}
+{% block title %}Newsletter | {{ block.super }}{% endblock %}
+{% block body_class %}{{ block.super }} newsletter-int{% endblock %}
+
+{% block interna %}
+<div class="center">
+    {% block newsleter_form %}
+        {% include "newsletter/_form.html" with newsletter_form=form %}
+    {% endblock newsleter_form  %}
+</div>
+
+{% endblock %}
+
+{% block extra_css %}
+{{ block.super }}
+<link rel="stylesheet" type="text/css" href="{% static 'js/smartlabel/css/smartlabel.css' %}" />
+{% endblock %}
+
+{% block extra_js %}
+<script type="text/javascript" src="{% static 'js/smartlabel/js/jquery.smartlabel.js' %}"></script>
+{% endblock %}

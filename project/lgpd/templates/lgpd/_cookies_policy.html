@@ -1,0 +1,11 @@
+<div class="cookie-banner" id="cookie-banner" style="display: none">
+    <div class="texto html-text">
+        <p>O site utiliza cookies para auxiliar na sua navegação, melhorar sua experiência como usuário/a, melhorar o conteúdo de nosso site, direcionar conteúdo de marketing, fazer análises e relatórios estatísticos sobre o uso do site, tudo para te proporcionar a melhor experiência possível. Para saber mais sobre cookies, acesse a nossa Política de Privacidade.</p>
+    </div>
+    <div class="row-button">
+        {% if politica_url %}
+        <a href="{{ politica_url }}" target="_blank">&raquo; Saiba mais</a>        
+        {% endif %}
+        <button class="close" type="button">Ok, entendi!</button>
+    </div>
+</div>

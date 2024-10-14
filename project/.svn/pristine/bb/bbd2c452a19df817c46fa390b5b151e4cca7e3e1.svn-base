@@ -1,0 +1,447 @@
+{% extends "base.html" %}
+{% load static %}
+{% load thumbnail %}
+
+{% block title %}{% if seo.title %}{{ seo.title }}{% else %}{{ block.super }}{% endif %}{% endblock %}
+{% block description %}{{ seo.description|default:"" }}{% endblock %}
+
+{% block body_class %}{{ block.super }} home {% endblock %}
+
+{% block main %}
+<section class="box-banners fadeIn wow">
+    <div id="banners" class="banners owl-carousel owl-theme owl-dot-style">
+
+        {# for item in banner #}
+            {# thumbnail item.imagem "1920x736" as im #}
+            <div class="item-banner" style="background-image:url('../static/images/banner2.jpg');">
+                {% if item.url %}
+                <a href="{{ item.url }}" target="{{ item.target }}"></a>
+
+                {% endif %}
+                <div class="box-form-banner center">
+                    <div class="box-cont">
+                        <div class="text-box new">
+                            <div class="titulo">
+                                <p>{{ banner.titulo }}</p>
+                            </div>
+                            <div class="legenda">
+                                <p>{{ banner.legenda }}</p>
+                            </div>
+                        </div>
+                    {% include 'newsletter/_form.html' %}
+                    </div>
+                </div>
+            </div>
+            {# endthumbnail #}
+        {# endfor #}
+    </div>
+</section>
+
+<section class="sobre-home">
+    <div class="center">
+        <div class="titulo-head">
+            <p>{{ sobre.titulo }}</p>
+        </div>
+        <div class="text-head html-text">
+            {{ sobre.resenha|safe }}
+        </div>
+        <div class="box-itens">
+            <div class="titulo-head-two">
+                <p>Investimento para uma loja</p>
+            </div>
+            {% for item in investimentos %}
+            <div class="item">
+
+                {% if item.subtitulo %}
+                <div class="initial">
+                    <p>{{ item.subtitulo }}</p>
+                </div>
+                {% else %}
+                <div class="initial" style="background-color:transparent ;">
+                    <p></p>
+                </div>
+                {% endif %}
+                <div class="box-int">
+                    <div class="thumb">
+                        {% thumbnail item.imagem "44x46" crop='center' format='PNG' as im %}
+                        <img src="{{ im.url }}" alt="">
+                        {% endthumbnail %}
+                    </div>
+                    <div class="titulo">
+                        <p>{{ item.nome }}</p>
+                    </div>
+                    <div class="preco">
+                        <p>{{ item.preco }}</p>
+                    </div>
+                    <div class="legenda">
+                        <p>{{ item.legenda }}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            
+            <!-- <div class="item">
+                <div class="initial">
+                    <p>Inicial</p>
+                </div>
+                <div class="box-int">
+                    <div class="thumb">
+                        <img src="{% static 'images/img1.png' %}" alt="">
+                    </div>
+                    <div class="titulo">
+                        <p>Capital para instalação</p>
+                    </div>
+                    <div class="preco">
+                        <p>R$ 0,00</p>
+                    </div>
+                    <div class="legenda">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam odit architecto assumenda impedit,</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="initial">
+                    <p>Inicial</p>
+                </div>
+                <div class="box-int">
+                    <div class="thumb">
+                        <img src="{% static 'images/icon.png' %}" alt="">
+                    </div>
+                    <div class="titulo">
+                        <p>Taxa de Franquia</p>
+                    </div>
+                    <div class="preco">
+                        <p>R$ 50 mil</p>
+                    </div>
+                    <div class="legenda">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam odit architecto assumenda impedit,</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="initial">
+                    <p>Inicial</p>
+                </div>
+                <div class="box-int">
+                    <div class="thumb">
+                        <img src="{% static 'images/icon2.png' %}" alt="">
+                    </div>
+                    <div class="titulo">
+                        <p>Capital de giro</p>
+                    </div>
+                    <div class="preco">
+                        <p>R$ 0,00</p>
+                    </div>
+                    <div class="legenda">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam odit architecto assumenda impedit,</p>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="initial">
+                    <p>Inicial</p>
+                </div>
+                <div class="box-int">
+                    <div class="thumb">
+                        <img src="{% static 'images/icon3.png' %}" alt="">
+                    </div>
+                    <div class="titulo">
+                        <p>Investimento Total</p>
+                    </div>
+                    <div class="preco">
+                        <p>R$ 50 mil</p>
+                    </div>
+                    <div class="legenda">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam odit architecto assumenda impedit,</p>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+        <div class="new-box">
+            <div class="item-box">
+                <div class="thumb">
+                    <img src="{% static 'images/item.png' %}" alt="">
+                </div>
+                <div class="titulo">
+                    <p>Retorno do Investimento</p>
+                </div>
+                <div class="legenda">
+                    <p>De 8 a 15 meses</p>
+                </div>
+            </div>
+            <div class="item-box">
+                <div class="thumb">
+                    <img src="{% static 'images/item2.png' %}" alt="">
+                </div>
+                <div class="titulo">
+                    <p>Proposta da Clínica</p>
+                </div>
+                <div class="legenda">
+                    <p>Multi especialidades</p>
+                </div>
+            </div>
+            <div class="item-box">
+                <div class="thumb">
+                    <img src="{% static 'images/item3.png' %}" alt="">
+                </div>
+                <div class="titulo">
+                    <p>Estado sede</p>
+                </div>
+                <div class="legenda">
+                    <p>São Paulo - SP</p>
+                </div>
+            </div>
+            <div class="item-box">
+                <div class="thumb">
+                    <img src="{% static 'images/item4.png' %}" alt="">
+                </div>
+                <div class="titulo">
+                    <p>Números de funcionários</p>
+                </div>
+                <div class="legenda">
+                    <p>A partir de 2</p>
+                </div>
+            </div>
+            <div class="item-box">
+                <div class="thumb">
+                    <img src="{% static 'images/item5.png' %}" alt="">
+                </div>
+                <div class="titulo">
+                    <p>Número total de Unidades</p>
+                </div>
+                <div class="legenda">
+                    <p>1 Unidade</p>
+                </div>
+            </div>
+            <div class="item-box">
+                <div class="thumb">
+                    <img src="{% static 'images/item6.png' %}" alt="">
+                </div>
+                <div class="titulo">
+                    <p>Taxa de Marketing</p>
+                </div>
+                <div class="legenda">
+                    <p>Incluso</p>
+                </div>
+            </div>
+        </div>
+        <div class="bg-orange">
+            <div class="box-flex">
+                <div class="text">
+                    <p>Royalties</p>
+                </div>
+                <div class="item-bg one">
+                    <p>Taxa: 30%</p>
+                </div>
+                <div class="item-bg two">
+                    <p>Base de Cálculo: Faturamento Total</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<section class="beneficios">
+    <div class="center">
+        <div class="titulo-head">
+            <p>{{ beneficios.titulo }}</p>
+        </div>
+        <div class="legenda html-text">
+            {{ beneficios.resenha|safe }}
+        </div>
+        <div class="box-flex">
+            <div class="box-tree">
+                <div class="item">
+                    <span class="balao" style="background: url(../static/images/balao.png);position: absolute;top: 0px; height: 162px;width: 225px;"></span>
+                    <div class="text-box">
+                        <div class="titulo">
+                            <p>Contrato de Franquia</p>
+                        </div>
+                        <div class="resenha">
+                            <p>Contrato de 5 nos renovação sem nova taxa de franquia</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <span class="balao" style="background: url(../static/images/balao2.png);position: absolute;top: 0px; height: 162px;width: 225px;"></span>
+                    <div class="text-box">
+                        <div class="titulo">
+                            <p>Segurança para as suas vendas</p>
+                        </div>
+                        <div class="resenha">
+                            <p>A franqueadora gerencia toda a venda  e identifica anuidade  que é comercializada fora do cep de atuação da franquia</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <span class="balao" style="background: url(../static/images/balao3.png);position: absolute;top: 0px; height: 162px;width: 225px;"></span>
+                    <div class="text-box">
+                        <div class="titulo">
+                            <p>Suporte documental</p>
+                        </div>
+                        <div class="resenha">
+                            <p>Orientação quanto ao objeto social e tipo societário</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <span class="balao" style="background: url(../static/images/balao2.png);position: absolute;top: 0px; height: 162px;width: 225px;"></span>
+                    <div class="text-box">
+                        <div class="titulo">
+                            <p>Suporte do software e melhorias</p>
+                        </div>
+                        <div class="resenha">
+                            <p>Apoio contra qualquer problema encontrado na aplicação e implementações de melhorias gratuitamente.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <span class="balao" style="background: url(../static/images/balao3.png);position: absolute;top: 0px; height: 162px;width: 225px;"></span>
+                    <div class="text-box">
+                        <div class="titulo">
+                            <p>Treinamento</p>
+                        </div>
+                        <div class="resenha">
+                            <p>Acesso as plataformas do sistema, lista de associados, fechamento dos agentes, fechamento de vendas da franquia e muito mais.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box-tree">
+                <div class="item">
+                    <span class="balao" style="background: url(../static/images/balao.png);position: absolute;top: 0px; height: 162px;width: 225px;"></span>
+                    <div class="text-box">
+                        <div class="titulo">
+                            <p>Contrato com parceiros</p>
+                        </div>
+                        <div class="resenha">
+                            <p>Disponibilização do contrato com parceiros da unidade</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <span class="balao" style="background: url(../static/images/balao2.png);position: absolute;top: 0px; height: 162px;width: 225px;"></span>
+                    <div class="text-box">
+                        <div class="titulo">
+                            <p>Suporte constante</p>
+                        </div>
+                        <div class="resenha">
+                            <p>Suporte ao franqueado nas diversas necessidade.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <span class="balao" style="background: url(../static/images/balao3.png);position: absolute;top: 0px; height: 162px;width: 225px;"></span>
+                    <div class="text-box">
+                        <div class="titulo">
+                            <p>Suporte <br>Jurídico </p>
+                        </div>
+                        <div class="resenha">
+                            <p>Suporte relacionado ao negócio</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <span class="balao" style="background: url(../static/images/balao2.png);position: absolute;top: 0px; height: 162px;width: 225px;"></span>
+                    <div class="text-box">
+                        <div class="titulo">
+                            <p>Suporte de marketing</p>
+                        </div>
+                        <div class="resenha">
+                            <p>Planejamento de marketing e redes sociais</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="processos">
+    <div class="center">
+        <div class="box-flex">
+            <div class="item">
+                <div class="titulo">
+                    <p>Processo de seleção</p>
+                </div>
+                <div class="legenda">
+                    <p>Conheça as etapas do processo de seleção da Franquia Procard Benefícios</p>
+                </div>
+                <div class="texto html-text">
+                    <p>1. Contato inicial</p>
+                    <p>2. Apresentação do Projeto</p>
+                    <p>3. Assinatura do Contrato</p>
+                    <p>4. Definição do CNPJ/CNAE</p>
+                    <p>5. Treinamento</p>
+                    <p>6. Inauguração da Parceria</p>
+                    <p>7. Início das Vendas</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="titulo">
+                    <p>Perfil do Franqueado</p>
+                </div>
+                <div class="legenda">
+                    <p>Conheça o perfil que buscamos em nossos Franqueados</p>
+                </div>
+                <div class="texto html-text">
+                    <p>1. Não é necessário ser profissional de saúde.</p>
+                    <p>2. Não é necessário ter Franquia como atividade principal.</p>
+                    <p>3. Possuir uma Clínica Médica com múltiplas especialidades.</p>
+                    <p>4. Ter parceria com Laboratórios de apoio.</p>
+                    <p>5. Capacidade de Gestão administrativa e Financeira.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="segmentos">
+    <div class="center">
+        <div class="box-itens">
+            <div class="item">
+                <div class="titulo">
+                    <p>Segmento de Atuação</p>
+                </div>
+                <div class="resenha">
+                    <p>Saúde, beleza e bem estar</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="titulo">
+                    <p>Subsegmento Primário</p>
+                </div>
+                <div class="resenha">
+                    <p>Serviços Médicos</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="titulo">
+                    <p>Tipo de Negócio</p>
+                </div>
+                <div class="resenha">
+                    <p>Consultas Médicas, Consultas Odontológicas, Exames Laboratoriais e de Imagem a preços acessíveis.</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="titulo">
+                    <p>Fundação</p>
+                </div>
+                <div class="resenha">
+                    <p>20019</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="titulo">
+                    <p>Início da <br> Franquia</p>
+                </div>
+                <div class="resenha">
+                    <p>2022</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}

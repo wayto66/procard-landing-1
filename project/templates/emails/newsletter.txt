@@ -1,0 +1,10 @@
+Formulário de licença através do site
+----------------------------------------------------------------------------------------------------------------
+
+Nome: {{ form.nome }}
+E-mail: {{ form.email_newsletter }}
+Telefone: {{ form.telefone }}
+Cidade onde reside: {{ form.cidade_reside }}
+Cidade de interesse: {{ form.cidade_interesse }}
+----------------------------------------------------------------------------------------------------------------
+E-mail enviado em {{ data|date:"d/m/Y" }} às {{ data|date:"H\hi" }}

@@ -1,0 +1,31 @@
+{% load widget_tweaks %}
+<form action="{% url 'newsletter:newsletter_form' %}" method="post" class="box-form form-captcha">
+    {% csrf_token %}
+    <div class="titulo">
+        <p>Preencha este formulário e receba informações  sobre a Franquia Procard Benefícios</p>
+    </div>
+        <div class="smartlabel">
+                <div class="wrapper-input col-1">
+                    {{ newsletter_form.nome.label_tag }}
+                    {% render_field newsletter_form.nome class="input-style" %}
+                    {{ newsletter_form.nome.errors }}
+                </div>
+                <div class="wrapper-input col-1" style="position: relative;">
+                    {{ newsletter_form.email_newsletter.label_tag }}
+                    {% render_field newsletter_form.email_newsletter class="input-style" %}
+                    {{ newsletter_form.email_newsletter.errors }}
+                </div>
+                <div class="wrapper-input col-1">
+                    {{ newsletter_form.telefone.label_tag }}
+                    {% render_field newsletter_form.telefone class="input-style phonemask" %}
+                    {{ newsletter_form.telefone.errors }}
+                </div>
+                <div class="clear"></div>
+                <div class="text-box">
+                    <p>Ao submeter esse formulário, seus dados de contato serão enviados à(s) franqueadora. <br><br>Se tiver dúvidas, consulte nossos <span style="color:#f6905a; font-weight:600"> Termos de uso e privacidade</span> </p>
+                </div>
+                <div class="box-button">
+                    <button type="submit" class="button-form">Quero saber mais</button>
+                </div>
+        </div>
+</form>

@@ -1,0 +1,11 @@
+.grp-changelist-results table tbody.ui-sortable{float:none;}
+.grp-changelist-results table tbody tr.grp-row-even td.ui-sortable-handle,
+.grp-changelist-results table tbody tr.grp-row-odd td.ui-sortable-handle{text-align: center;}
+.grp-changelist-results table tbody tr td.ui-sortable-handle .sorthandle{display: flex;justify-content: center;align-items: center;}
+.grp-changelist-results table tbody tr td.ui-sortable-handle .sorthandle .grp-icon{display: inline-block;vertical-align: middle;height: 15px;}
+.grp-changelist-results table tbody tr td.ui-sortable-handle .icon-grab{display: inline-block;vertical-align: middle; width: 24px;height: 15px;background-position: 0 -2600px;background-image: url(/static/grappelli/images/icons-s79f97b581c.png);background-repeat: no-repeat;}
+.grp-changelist-results table tbody tr td.ui-sortable-handle .icon-grab:hover{background-position: 0 -2644px;}
+.grp-changelist-results table tbody tr:nth-child(odd) td,
+.grp-changelist-results table tbody tr:nth-child(odd) th{background-color: #f4f4f4;}
+.grp-changelist-results table tbody tr:nth-child(even) td,
+.grp-changelist-results table tbody tr:nth-child(even) th{background-color: #fff;}

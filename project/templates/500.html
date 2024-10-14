@@ -1,0 +1,43 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Erro 500 - Erro interno do servidor</title>
+    <style type="text/css">
+    * {
+        margin:0;
+        padding:0;
+    }
+    
+    body{
+        font-family:verdana, arial;
+        padding:150px 0 0 0;
+    }
+    
+    h1{
+        color:#990000;
+        font-size:25px;
+        padding:0 0 20px 0;
+    }
+    
+    p{
+        padding:0 0 10px 0;
+    }
+    
+    #container{
+        background:url({% static 'images/img_exclamacao.jpg' %}) no-repeat 0 0;
+        width:600px;
+        padding:0 0 0 150px;
+        margin:0 auto;
+    }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>Erro interno no servidor.</h1>
+        <p>Desculpe-nos o transtorno.</p>
+        <p>Tente novamente mais tarde.</p>
+    </div>
+</body>
+</html>

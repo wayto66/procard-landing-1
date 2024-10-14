@@ -1,0 +1,42 @@
+
+<h2 class="title">POLÍTICA DE PRIVACIDADE</h2>
+    <div class="texto">
+        <p>
+            A presente Política de Privacidade e Proteção de Dados Pessoais (“Política de Privacidade”) tem o objetivo explicar e informar, de maneira fácil e transparente, como a {{ lgpd_nome }}, inscrita no CNPJ nº {{ lgpd_cnpj }}, trata os dados pessoais dos seus clientes e do público em geral que acessa o seu website ({{ lgpd_dominio }}).
+        </p>
+        <p>
+            Recomendamos que leia com atenção a presente Política de Privacidade. As regras aqui dispostas se aplicam a todas as áreas do site, em que poderão ser coletados alguns dados pessoais. Ao acessar o site da {{ lgpd_nome }}, o usuário concorda com esta Política de Privacidade, e o comportamento do usuário em continuar usando o site é interpretado como anuência aos termos desta Política.
+        </p>
+        <p>
+            Esta Política de Privacidade foi desenvolvida com a observância da Lei Federal nº 12.965/2014 (Marco Civil da Internet), regulamentada pelo Decreto nº 8.771/2016, e pela Lei Federal nº 13.709/2018 (Lei Geral de Proteção de Dados).
+        </p>
+    </div>
+
+    <h2 class="title">1. QUAIS DADOS COLETAMOS</h2>
+    <div class="texto">
+        <p>A {{ lgpd_nome }} terá acesso aos dados e informações pessoais diretamente fornecidas no formulário disponível para contato em nosso site como: (i) Nome; (ii) Endereço de e-mail. Você garante a veracidade e exatidão dos dados e informações pessoais que fornece.</p>
+    </div>
+  
+    <h2 class="title">2. COMO UTILIZAMOS OS DADOS PESSOAIS</h2>
+    <div class="texto">
+        <p>Uma vez que você demonstrou interesse nos serviços da {{ lgpd_nome }}, os dados pessoais coletados terão a finalidade de identificar você para responder as solicitações efetuadas em nossos canais de atendimento e para informar sobre novidades, funcionalidades, conteúdos, notícias e demais eventos que consideramos relevantes. Somente a {{ lgpd_nome }} enviará essas comunicações em sua conta de e-mail, sendo que, a qualquer tempo, essa opção poderá ser alterada. A base de dados formada por meio da coleta de dados pessoais está sob nossa responsabilidade, sendo que seu uso, acesso e compartilhamento, quando necessários, serão feitos dentro dos limites e propósitos dos negócios descritos nesta Política de Privacidade.</p>
+    </div> 
+
+    <h2 class="title">3. COM QUEM COMPARTILHAMOS</h2>
+    <div class="texto">
+        <p>Na {{ lgpd_nome }} nós só compartilhamos os seus dados nas hipóteses permitidas por lei ou com o seu consentimento. Temos o compromisso de, em nenhuma hipótese, vender as suas informações ou usá-las com a finalidade de obter lucro. Internamente, os dados pessoais coletados são acessados somente por colaboradores autorizados, respeitando os princípios de proporcionalidade, necessidade e relevância para os objetivos do nosso negócio, além do compromisso de confidencialidade e preservação da sua privacidade nos termos desta Política. Os dados pessoais também serão compartilhados em situações específicas, como com nossos prestadores de serviços e parceiros (por exemplo, técnicos de informática, fornecedores que desenvolvem ou hospedam nosso site), desde que aprovados em processo interno de conformidade. <span style="color: inherit;">Os servidores utilizados pelo nosso parceiro contratado exclusivamente para poder oferecer os serviços contidos no site pertencem à Linode (https://www.linode.com/), localizados no exterior.</span> Não retemos nenhuma informação dos visitantes. Os dados coletados e as atividades registradas podem ser compartilhados com autoridades judiciais, administrativas ou governamentais competentes, sempre que houver determinação legal, requerimento, requisição ou ordem judicial.</p>
+    </div>
+    <h2 class="title">4. COOKIES</h2>
+    <div class="texto">
+        <p>Ao acessar o site da {{ lgpd_nome }}, certas informações sobre o usuário serão armazenadas, tais como o protocolo de internet (IP), o navegador utilizado, o sistema operacional, o conteúdo acessado, o tempo de utilização do site e outras informações semelhantes. Essas informações poderão ser coletadas através do uso de cookies. Cookies são pequenos arquivos de texto transferidos para o seu navegador ou dispositivo e ali ficam armazenados. Estes pequenos arquivos servem para reconhecer, acompanhar e armazenar a navegação do usuário na Internet. O nosso site utiliza cookies essenciais, necessários para fornecer os serviços disponíveis no nosso website, e cookies de sessão, temporários que permanecerão no seu dispositivo até que finalize a navegação. Os cookies também poderão ser utilizados para compilar estatísticas anônimas e agregadas que permitem entender como você utiliza o nosso site, bem como para aprimorar suas estruturas e conteúdo. Não te identificaremos de forma pessoal por meio desses dados. Nós utilizamos o Google Analytics com esse propósito. Google Analytics utiliza os seus próprios cookies, e você poderá saber mais informação sobre estes cookies aqui: https://developers.google.com/analytics/devguides/collection/analyticsjs/cookieusage. Esta Política de Privacidade não cobre o uso de cookies por terceiros, e não somos responsáveis por suas políticas e práticas de privacidade. Você pode optar por recusar ou desabilitar os cookies por meio das configurações do seu navegador, ou ao instalar um plug-in que realize essa funcionalidade.</p>
+    </div>
+    <h2 class="title">5. POR QUANTO TEMPO ARMAZENAMOS SEUS DADOS</h2>
+    <div class="texto">
+        <p>Guardamos os seus dados pessoais pelo período necessário ou quando, por motivos legais, somos obrigados. A {{ lgpd_nome }} também excluirá os dados pessoais que não forem mais necessários ou relevantes nos termos da Lei nº 13.709/2018 ou os tornará anonimizados para que com o tratamento deles não seja mais possível identificar o usuário. O usuário pode, a qualquer tempo, requerer a exclusão, inserção, alteração e qualquer informação dos seus dados pessoais nos termos da Lei n. 13.709/2018, por procedimento gratuito e facilitado, enviando mensagem ao contato indicado na presente Política de Privacidade. Nesta hipótese, os dados coletados serão devidamente tratados conforme solicitado e, se o caso, excluídos dos servidores da {{ lgpd_nome }}. Por força legal, inclusive mesmo caso solicite a exclusão, dados coletados de forma automatizada serão mantidos por, no mínimo, 06 (seis) meses contados da data em que a interação em nosso site foi realizada.</p>
+    </div>
+    <h2 class="title">6. CONSIDERAÇÕES FINAIS</h2>
+    <div class="texto">
+        <p>A Política de Privacidade da {{ lgpd_nome }} pode passar por atualizações para que se adeque à legislação aplicável, às resoluções e demais atos normativos da Autoridade Nacional de Proteção de Dados (ANPD). A última versão será indicada ao final deste documento com a última data de sua atualização, que será a Política de Privacidade vigente. Recomendamos que os usuários visitem o site da {{ lgpd_nome }} periodicamente, para se atualizarem das modificações em nossa Política de Privacidade. De todo modo, modificações que possam importar em alteração das finalidades dos tratamentos de dados ou que importem em compartilhamento ou comunicação de dados a terceiros serão comunicadas aos titulares dos dados de acordo com o disposto em Lei, sendo-lhes requerido, se for o caso, o consentimento para o tratamento para esta outra finalidade ou para a comunicação ou compartilhamento de dados. Após a leitura desta Política de Privacidade, em caso de qualquer dúvida ou solicitações para o cumprimento de seus direitos, mais detalhes sobre a coleta ou processamento de dados pessoais podem ser solicitados à {{ lgpd_nome }} a qualquer momento.</p>
+        <p>Entre em contato conosco pelo e-mail {{ lgpd_email }}. Esta Política deve ser interpretada segundo a legislação brasileira. Caso alguma disposição seja considerada ilegal ou ilegítima, as demais condições válidas permanecerão aplicáveis. <span style="color: inherit;">Fica eleito o foro da Comarca de Ribeirão Preto, Estado de São Paulo para resolução de qualquer litígio ou controvérsia envolvendo este documento.</span></p>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+{% extends "internas.html" %}
+
+{% block title %}{{ page_name }} | {{ block.super }}{% endblock %}
+{% block body_class %}{{ block.super }} padrao fill {{ page_class }}{% endblock %}
+
+{% block name %}{{ page_name }}{% endblock %}
+
+{% block breadcumbs %}
+    {% for b in breadcumbs %}
+    <li class="item">{{ b }}</li>
+    {% endfor %}
+    <li class="item">{{ page_name }}</li>
+{% endblock %}
+
+{% block conteudo %}
+    <div class="texto">
+        {{ object.texto|safe }}
+    </div>
+{% endblock %}

@@ -1,0 +1,27 @@
+# -*- coding: utf-8 -*-
+from __future__ import unicode_literals
+from unidecode import unidecode
+
+from django.db import models
+from utils.models import TimeStampedModel
+from utils.fields import TelefoneField
+
+class Newsletter(TimeStampedModel):
+    nome = models.CharField('Nome Completo', max_length=255)
+    email_newsletter = models.EmailField(
+        'Email de Contato',
+        unique=True
+    )
+    telefone = TelefoneField(
+        'Telefone com DDD',
+        blank=True
+    )
+
+
+    class Meta:
+        verbose_name = 'Newsletter'
+        verbose_name_plural = 'Newsletters'
+        ordering = ['-id']
+
+    def __str__(self):
+        return self.email

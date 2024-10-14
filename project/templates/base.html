@@ -1,0 +1,137 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme-color" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{% block base_description %}{% if seo.seo_description %}{{ seo.seo_description|default:'' }}{% else %}{% block description %}{% endblock %}{% endif %}{% endblock %}">
+    <title>{% block base_title %}{% if seo.seo_title %}{{ seo.seo_title }}{% else %}{% block title %}{{ SITE_NAME }}{% endblock %}{% endif %}{% endblock %}</title>
+
+    <link href="{% static 'images/favicon-16.png' %}" rel="icon" sizes="16x16">
+    <link href="{% static 'images/favicon-32.png' %}" rel="icon" sizes="32x32">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Hind:300,400,500,600,700&amp;display=swap" rel="stylesheet">
+    <link href="{% static 'js/smartlabel/css/smartlabel.css' %}?v=2" rel="stylesheet" type="text/css" media="all" />
+    <link href="{% static 'js/swipebox/src/css/swipebox.min.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'js/swipebox/shield/swipebox-shield.css' %}" rel="stylesheet" type="text/css" />    
+    <link href="{% static 'js/lgpd/cookie-policy.css' %}?v=1" rel="stylesheet" type="text/css" />
+    <link href="{% static 'css/layout.css' %}?v=18" rel="stylesheet" type="text/css"/>
+    <!-- Extra CSS -->
+    {% block extra_css %}{% endblock %}
+    {{ embed_head.first.html|safe }}
+</head>
+<body class="{% block body_class %}{% endblock %}">
+    <header class="main-header" id="main-header">
+        <div id="faixa-menu-mobile" class="faixa-menu-mobile mobile">
+            <span id="icon-menu" class="icon-menu mobile close-submenu">
+                <span class="icon"></span>
+            </span>
+        </div>
+        <div class="center">
+            <div class="wrapper-topo">
+                <h1 class="logo-container">
+                    <a href="{% url 'home'%}" title="{{ SITE_NAME }}">
+                        <img src="{% static 'images/logo.png' %}" width="286" height="121" alt="{{ SITE_NAME }}" class="logo">
+                    </a>
+                </h1>
+                <!-- <div class="wrapper-nav">
+                    <nav class="box-menu" id="main-menu">
+                        <span id="icon-menu" class="icon-menu mobile">
+                            <span class="icon"></span>
+                        </span>
+                        <ul class="menu">
+                            <li class="item">
+                                    <a href="{% url 'home' %}" class="home" data-sessao="home">Home</a>
+                            </li>
+                            <li class="item">
+                                <a href="#" class="quem-somos-menu scroll-home" data-sessao="quem-somos">Quem Somos</a>
+                            </li>
+                            <li class="item">
+                                <a href="#" class="produtos-menu">Produtos</a>
+                            </li>
+                            <li class="item">
+                                <a href="#" class="novidades-menu">Novidades</a>
+                            </li>
+                            <li class="item">
+                                <a href="#" class="trabalhe-menu">Trabalhe Conosco</a>
+                            </li>
+                            <li class="item">
+                                <a href="#" class="contato-menu scroll-home" data-sessao="contato">Contato</a>
+                            </li>
+                        </ul>
+
+                    </nav>
+                </div> -->
+            </div>
+        </div>
+    </header>
+    
+
+
+    {% block main %}{% endblock %}
+    <a href="mailto:expansao@procardbeneficios.com.br" class="zap-home" target="_blank">
+        <div class="center">
+            <div class="box-flex">
+                <div class="text">
+                    <span>Atendimento personalizado</span>
+                    <p>Fale conosco no expansao@procardbeneficios.com.br</p>
+                </div>
+            </div>
+        </div>
+    </a>
+    <div class="box-copyright">
+        <div class="center">
+            <div class="copyright">
+                <p>© 2022 - Direitos reservados</p>
+                <a href="http://www.atualint.com.br/" target="_blank" class="atualinterativa" title="Desenvolvido por Atual Interativa">Desenvolvido por Atual Interativa</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed-chat desktop active" id="fixed-chat">
+        <!-- <button class="close xzinho">
+            <img src="{% static 'images/x.svg' %}" alt="" width="15" height="15">
+
+        </button> -->
+
+        <div class="thumb handle-chat">
+            <div class="text-chat">
+                <p id="fold_p">Clique aqui para minimizar!</p>
+            </div>
+        </div>
+        <div class="chat-content" id="fixed-chat-content">
+            <!-- <div class="chat-wrap">
+                <button id="abrirchat-areamedica" type="button" class="bt-chat">CURSOS ÁREA MÉDICA</button>
+                <button id="abrirchat-outros" type="button" class="bt-chat">OUTROS CURSOS</button>
+                <a href="/servicos-a-comunidade/exames/" class="bt-chat">EXAMES</a>
+            </div> -->
+            {% include 'newsletter/_form.html' with newsletter_form=newsletter_form_base %}
+        </div>
+
+    </div>
+
+    {% if CONTATO_OBJ.link_whatsapp %}
+        {% include "_whatsapp.html" with link_whatsapp=CONTATO_OBJ.link_whatsapp mensagem="Envie-nos uma mensagem" %}
+    {% endif %}
+
+    {% url 'lgpd:lgpd' as politica_url %}    
+    {% include "lgpd/_cookies_policy.html" with politica_url=politica_url %}
+
+
+
+    <!-- jQuerry from Google Hosted Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="{% static 'js/jquery.mask.min.js' %}"></script>
+    <script src="{% static 'js/smartlabel/js/jquery.smartlabel.js' %}"></script>
+    <script src="{% static 'js/swipebox/src/js/jquery.swipebox.min.js' %}" type="text/javascript"></script>
+    <script src="{% static 'js/swipebox/shield/swipebox-shield.js' %}" type="text/javascript"></script>  
+    <script src="{% static 'js/lgpd/cookie-policy.js' %}?v=1" type="text/javascript" ></script>    
+    <script src="{% static 'js/base.js' %}?v=2"></script>
+    <!-- Extra JS -->
+    {% block extra_js %}{% endblock %}
+    {{ embed_body.first.html|safe }}
+</body>
+</html>

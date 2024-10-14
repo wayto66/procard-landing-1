@@ -1,0 +1,4 @@
+{% load thumbnail %}
+{% thumbnail image "200x100" upscale="False" as im %}
+    <img src="{{ im.url }}" alt="">
+{% endthumbnail %}

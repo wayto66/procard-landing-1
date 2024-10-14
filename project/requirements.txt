@@ -1,0 +1,9 @@
+python-decouple==3.1
+Django>=2.2,<2.3
+mysqlclient==1.4.2.post1
+Pillow >= 7
+django-widget-tweaks==1.4.8
+Unidecode==1.0.23
+django-grappelli==2.13.4
+sorl-thumbnail==12.7.0
+django-ckeditor==6.0.0

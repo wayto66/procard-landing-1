@@ -1,0 +1,17 @@
+{% extends "internas.html" %}
+
+
+{% block title %}Política de privacidade | {{ block.super }}{% endblock %}
+{% block name %}{% endblock %}
+{% block body_class %}{{ block.super }} lgdp bannerless {% endblock %}
+{% block segmento %}Política de privacidade{% endblock %}
+
+{% block banner_interno %}{% endblock %}
+
+{% block interna %}
+<div class="content-policy">
+    <div class="html-text">
+        {% include "lgpd/_content_policy.html" %}
+    </div>
+</div>
+{% endblock %}

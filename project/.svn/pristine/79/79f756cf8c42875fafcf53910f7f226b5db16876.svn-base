@@ -1,0 +1,30 @@
+.smartlabel input,
+.smartlabel textarea{
+    -webkit-transition: all 0.1s linear;
+    transition: all 0.1s linear;
+}
+
+.smartlabel label{
+    position: absolute;
+    top: 11px;
+    left: 20px;
+    font-size: 15px;
+    color: #666;
+    cursor: text;
+    -webkit-transition: all 0.1s linear;
+    transition: all 0.1s linear;
+}
+.smartlabel .label-top-16 label{top: 16px;}
+
+.smartlabel.active label,
+.smartlabel .active label,
+.smartlabel .wrapper-fixedlabel label{
+    top: -8px;
+    left: 15px;
+    font-size: 12px;
+    color: #231e20;
+    background-color: #fff;
+    padding: 0 5px;
+}
+
+.smartlabel .wrapper-fixedlabel{position: relative;}

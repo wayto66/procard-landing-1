@@ -1,0 +1,11 @@
+# coding: utf-8
+from .forms import NewsletterForm
+
+
+def newsletter(request):
+
+    newsletter_form = NewsletterForm()
+
+    return {
+        'newsletter_form': newsletter_form,
+    }
